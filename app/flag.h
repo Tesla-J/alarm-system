@@ -7,15 +7,15 @@
  * They will be in the 4 most significant bits
  * to standardize the serial communication
  */
-#define TEMPERATURE_SENSOR
-#define LIGHT_SENSOR
-#define GAS_SENSOR
+#define TEMPERATURE_SENSOR	1
+#define LIGHT_SENSOR		2
+#define GAS_SENSOR		3
 
-#define FIRE_ALERT
-#define LIGHTS_ON
-#define TURN_OFF_LIGHS
-#define BUZZER_ON
-#define TURN_OFF_BUZZER
+#define FIRE_ALERT		4
+#define LIGHTS_ON		5
+#define TURN_OFF_LIGHS		6
+#define BUZZER_ON		7
+#define TURN_OFF_BUZZER		8
 
 /*
  * Sensor manipulation functions
