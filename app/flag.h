@@ -21,18 +21,16 @@
  * Sensor manipulation functions
  *
  * Functions to assign and remove flags from sensor data
- * it assumes that the int size is 32 bits
- * so the data must be less or equal to 0xf00 (3840)
- * to avoid bugs.
+ * Note that in Arduino Uno the int size is 16 bits
  */
 
 int assign_flag (int flag, int data) {
-	return (flag<<28) | data;
+	return (flag<<12) | data;
 }
 
 
 int remove_flag (int data) {
-	return data & 0x0fffffff;
+	return data & 0x0fff;
 }
 
 #endif
