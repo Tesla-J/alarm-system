@@ -25,12 +25,17 @@ const int TURN_OFF_BUZZER	=	8;
  */
 
 int assign_flag (int flag, int data) {
-	return (flag<<12) | data;
+	return (flag << 12) | data;
 }
 
 
 int remove_flag (int data) {
 	return data & 0x0fff;
+}
+
+
+int read_flag (int data){
+	return (data & 0xf000) >> 12;
 }
 
 #endif
